@@ -1,14 +1,12 @@
 (function() {
      function AlbumCtrl() {
+        this.albumData = albumPicasso;
         this.albumArtUrl = albumPicasso.albumArtUrl;
-        this.title = 'The Colors';
-        this.artist = 'Pablo Picassco';
-        this.year = '1881';
-        this.label = 'Cubism'; 
-        this.albumData = [];
-         for(i=0; i < 5; i++){
-            this.albumData.push(angular.copy(albumPicasso));
-         }
+        this.title = albumPicasso.title;
+        this.artist = albumPicasso.artist;
+        this.year = albumPicasso.year;
+        this.label = albumPicasso.label;
+        
      }
  
      angular
