@@ -32,6 +32,12 @@
              setSong(song);   
              currentBuzzObject.play();  
              song.playing = true;
+            } 
+            else if (currentSong === song) {
+                 if (currentBuzzObject.isPaused()) {
+                     currentBuzzObject.play();
+                 }
+            }
         };
         
          SongPlayer.pause = function(song) {
