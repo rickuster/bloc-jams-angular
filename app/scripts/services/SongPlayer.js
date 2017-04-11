@@ -28,6 +28,16 @@
          };
         
          /**
+         * @function playSong
+         * @desc Plays the current audio file loaded in currentBuzzObject
+         */
+        
+        var playSong = function() {
+            currentBuzzObject.play();
+            currentSong.playing = true;
+        }
+        
+         /**
          * @function SongPlayer.play
          * @desc plays new song if not same as current else resume paused song
          */
@@ -35,8 +45,7 @@
         SongPlayer.play = function(song) {
             if (currentSong !== song) {
              setSong(song);   
-             currentBuzzObject.play();  
-             song.playing = true;
+             playSong();
             } 
             else if (currentSong === song) {
                  if (currentBuzzObject.isPaused()) {
