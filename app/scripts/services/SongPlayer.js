@@ -27,16 +27,32 @@
             currentSong = song;
          };
         
+         /**
+         * @function SongPlayer.play
+         * @desc plays new song if not same as current else resume paused song
+         */
+        
         SongPlayer.play = function(song) {
             if (currentSong !== song) {
              setSong(song);   
              currentBuzzObject.play();  
              song.playing = true;
+            } 
+            else if (currentSong === song) {
+                 if (currentBuzzObject.isPaused()) {
+                     currentBuzzObject.play();
+                 }
+            }
         };
         
+         /**
+         * @function SongPlayer.pause
+         * @desc puase the current song
+         */
+        
          SongPlayer.pause = function(song) {
-         currentBuzzObject.pause();
-         song.playing = false;
+             currentBuzzObject.pause();
+             song.playing = false;
          };
     
     return SongPlayer;
