@@ -4,7 +4,7 @@
          
          var albumPicasso = {
          title: 'The Colors',
-         artist: 'Pablo Picasso',
+         artist: 'Pablo Psicasso',
          label: 'Cubism',
          year: '1881',
          albumArtUrl: '/assets/images/album_covers/01.png',
